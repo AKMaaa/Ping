@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Kiwi Maru', 'Hiragino Maru Gothic ProN', 'Yu Gothic', sans-serif;
+  --font-display: 'Hachi Maru Pop', 'Kiwi Maru', 'Hiragino Maru Gothic ProN', sans-serif;
+
+  --color-paper: #fffcf5;
+  --color-ink: #3a4766;
+  --color-muted: #7d88a6;
+
+  --radius-blob: 2.1rem 1.8rem 2.3rem 1.9rem / 1.9rem 2.2rem 1.8rem 2.2rem;
+}
+
+/* カードのテーマカラー（地・枠・差し色）。data-accent で切り替える */
+[data-accent='sky'] {
+  --a-soft: #e7f5fd;
+  --a-line: #b3dcf3;
+  --a-solid: #7cc4ea;
+}
+[data-accent='mint'] {
+  --a-soft: #e6f8ef;
+  --a-line: #b2e4cf;
+  --a-solid: #7fd0b3;
+}
+[data-accent='lavender'] {
+  --a-soft: #f0ecfc;
+  --a-line: #d2c8f2;
+  --a-solid: #b8a8e6;
+}
+[data-accent='apricot'] {
+  --a-soft: #ffece0;
+  --a-line: #f8cdb0;
+  --a-solid: #f5ae7e;
+}
+[data-accent='aqua'] {
+  --a-soft: #e1f8f8;
+  --a-line: #aee4e4;
+  --a-solid: #70d0d2;
+}
+[data-accent='pink'] {
+  --a-soft: #fdebf3;
+  --a-line: #f5c4d9;
+  --a-solid: #f2a2c3;
+}
+[data-accent='purple'] {
+  --a-soft: #f5eafb;
+  --a-line: #ddc2ed;
+  --a-solid: #c79ce0;
+}
+[data-accent='blue'] {
+  --a-soft: #e9f1fe;
+  --a-line: #bdd1f4;
+  --a-solid: #90b1ed;
+}
+[data-accent='orange'] {
+  --a-soft: #fff4dc;
+  --a-line: #f9dca4;
+  --a-solid: #f7c76e;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  letter-spacing: 0.04em;
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
